@@ -17,24 +17,76 @@
    <widget class="QComboBox" name="comboBoxListPort">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>20</y>
-      <width>72</width>
-      <height>24</height>
+      <x>0</x>
+      <y>10</y>
+      <width>101</width>
+      <height>31</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonPort">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>-10</x>
+      <y>50</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ouvrir</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonRight">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>50</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Droite</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonTop">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
       <y>20</y>
       <width>80</width>
       <height>24</height>
      </rect>
     </property>
     <property name="text">
-     <string>ouvrir</string>
+     <string>Haut</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonLeft">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>50</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gauche</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonBack">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>100</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bas</string>
     </property>
    </widget>
   </widget>
@@ -56,7 +108,7 @@
     <bool>false</bool>
    </attribute>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QStatusBar" name="portlist"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
@@ -79,8 +131,77 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButtonBack</sender>
+   <signal>pressed()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>OnButtonBackClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonTop</sender>
+   <signal>pressed()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>OnButtonTopClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonLeft</sender>
+   <signal>pressed()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>OnButtonLeftClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>299</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonRight</sender>
+   <signal>pressed()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>OnButtonRightClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>479</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>OnButtonPortClicked()</slot>
+  <slot>scrollListPort()</slot>
+  <slot>OnButtonRightClicked()</slot>
+  <slot>OnButtonLeftClicked()</slot>
+  <slot>OnButtonTopClicked()</slot>
+  <slot>OnButtonBackClicked()</slot>
  </slots>
 </ui>
