@@ -26,17 +26,17 @@ void QtWidgetsApplication1::OnButtonPortClicked()
     }
 }
 void QtWidgetsApplication1::OnButtonRightClicked() {
-    cam.onSendDataPort();
+    cam.sendRight();
 }
 
 void QtWidgetsApplication1::OnButtonLeftClicked() {
-
+    cam.sendLeft();
 }
 
 void QtWidgetsApplication1::OnButtonTopClicked() {
-
+    cam.sendUpLeft();
 }
 
 void QtWidgetsApplication1::OnButtonBackClicked() {
-
+    cam.sendDownLeft();
 }

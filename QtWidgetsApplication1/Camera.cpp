@@ -34,7 +34,48 @@ bool Camera::ConnexionPort(QString portName) {
     }
 }
 void Camera::onSendDataPort() {
+    sendRight();
+}
+
+void Camera::sendFrame(const QByteArray &frame)
+{
     if (port != nullptr && port->isOpen()) {
-        port->write("test");
+        port->write(frame);
+        port->flush();
     }
+}
+
+void Camera::sendLeft()
+{
+    sendFrame(QByteArray::fromHex("01 06 01 00 00 01 03 FF FC 90"));
+}
+
+void Camera::sendRight()
+{
+    sendFrame(QByteArray::fromHex("01 06 01 00 00 02 03 FF 00 00"));
+}
+
+void Camera::sendUpLeft()
+{
+    sendFrame(QByteArray::fromHex("01 06 01 00 00 01 01 FF FE D4"));
+}
+
+void Camera::sendUpRight()
+{
+    sendFrame(QByteArray::fromHex("01 06 01 00 00 02 01 FF 00 00"));
+}
+
+void Camera::sendDownLeft()
+{
+    sendFrame(QByteArray::fromHex("01 06 01 00 00 01 02 FF"));
+}
+
+void Camera::sendDownRight()
+{
+    sendFrame(QByteArray::fromHex("01 06 01 00 00 02 02 FF"));
+}
+
+void Camera::sendStop()
+{
+    sendFrame(QByteArray::fromHex("01 06 01 00 00 03 03 FF"));
 }
