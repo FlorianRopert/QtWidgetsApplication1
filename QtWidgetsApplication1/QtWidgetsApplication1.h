@@ -31,6 +31,6 @@ public slots:
     void OnButtonUpRightClicked();
     void OnButtonUpTopClicked();
     void OnButtonUpBackClicked();
-    void OnButtonCheckupClicked();
+    void OnButtonUpCheckupClicked();
 };
 

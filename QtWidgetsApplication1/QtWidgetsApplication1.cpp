@@ -64,7 +64,7 @@ void QtWidgetsApplication1::OnButtonUpBackClicked()
     cam.sendDown();
 }
 
-void QtWidgetsApplication1::OnButtonCheckupClicked()
+void QtWidgetsApplication1::OnButtonUpCheckupClicked()
 {
     cam.sendLeft();
 
