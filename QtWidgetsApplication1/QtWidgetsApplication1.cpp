@@ -66,10 +66,10 @@ void QtWidgetsApplication1::OnButtonUpBackClicked()
 
 void QtWidgetsApplication1::OnButtonUpCheckupClicked()
 {
-    cam.sendLeft();
+    cam.sendLeft2();
 
     QTimer::singleShot(1500, this, [this]() {
-        cam.sendRight();
+        cam.sendRight2();
         });
 
     QTimer::singleShot(3000, this, [this]() {

@@ -89,3 +89,12 @@ void Camera::sendCenter() {
     sendFrame(QByteArray::fromHex("81 01 06 04 FF"));
 }
 
+void Camera::sendLeft2()
+{
+    sendFrame(QByteArray::fromHex("81 01 06 01 03 03 01 03 FF"));
+}
+
+void Camera::sendRight2()
+{
+    sendFrame(QByteArray::fromHex("81 01 06 01 03 03 02 03 FF"));
+}
