@@ -85,10 +85,7 @@ void Camera::sendDownRight()
     sendFrame(QByteArray::fromHex("81 01 06 01 10 10 02 02 FF"));
 }
 
-void Camera::sendStop()
-{
-    sendFrame(QByteArray::fromHex("81 01 06 01 10 10 03 03 FF"));
-}
 void Camera::sendCenter() {
-    sendFrame(QByteArray::fromHex("81 01 06 05 FF"));
+    sendFrame(QByteArray::fromHex("81 01 06 04 FF"));
 }
+

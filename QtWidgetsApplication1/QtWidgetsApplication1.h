@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
+#include <QTimer>
 #include "ui_QtWidgetsApplication1.h"
 #include "Camera.h"
 
@@ -25,6 +26,11 @@ public slots:
     void OnButtonRightClicked();
     void OnButtonTopClicked();
     void OnButtonBackClicked();
-    void OnButtonCenterClicked();
+    void OnButtonCentrerClicked();
+    void OnButtonUpLeftClicked();
+    void OnButtonUpRightClicked();
+    void OnButtonUpTopClicked();
+    void OnButtonUpBackClicked();
+    void OnButtonCheckupClicked();
 };
 

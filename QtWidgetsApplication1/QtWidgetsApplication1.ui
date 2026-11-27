@@ -40,8 +40,8 @@
    <widget class="QPushButton" name="pushButtonRight">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>50</y>
+      <x>410</x>
+      <y>100</y>
       <width>80</width>
       <height>24</height>
      </rect>
@@ -54,7 +54,7 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>10</y>
+      <y>60</y>
       <width>80</width>
       <height>24</height>
      </rect>
@@ -66,8 +66,8 @@
    <widget class="QPushButton" name="pushButtonLeft">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>50</y>
+      <x>230</x>
+      <y>100</y>
       <width>80</width>
       <height>24</height>
      </rect>
@@ -80,7 +80,7 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>100</y>
+      <y>140</y>
       <width>80</width>
       <height>24</height>
      </rect>
@@ -93,13 +93,78 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>50</y>
+      <y>100</y>
       <width>80</width>
       <height>24</height>
      </rect>
     </property>
     <property name="text">
      <string>Centrer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonUpLeft">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>100</y>
+      <width>31</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonUpRight">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>100</y>
+      <width>31</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonUpTop">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>30</y>
+      <width>31</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>^</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonUpBack">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>170</y>
+      <width>31</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>^</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonCheckup">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CHECKUP</string>
     </property>
    </widget>
   </widget>
@@ -224,6 +289,86 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButtonUpLeft</sender>
+   <signal>pressed()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>OnButtonUpLeftClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonUpRight</sender>
+   <signal>pressed()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>OnButtonUpRightClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonUpTop</sender>
+   <signal>pressed()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>OnButtonUpTopClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonUpBack</sender>
+   <signal>pressed()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>OnButtonUpBackClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonCheckup</sender>
+   <signal>pressed()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>OnButtonUpCheckupClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>OnButtonPortClicked()</slot>
@@ -233,5 +378,10 @@
   <slot>OnButtonTopClicked()</slot>
   <slot>OnButtonBackClicked()</slot>
   <slot>OnButtonCentrerClicked()</slot>
+  <slot>OnButtonUpTopClicked()</slot>
+  <slot>OnButtonUpBackClicked()</slot>
+  <slot>OnButtonUpLeftClicked()</slot>
+  <slot>OnButtonUpRightClicked()</slot>
+  <slot>OnButtonUpCheckupClicked()</slot>
  </slots>
 </ui>

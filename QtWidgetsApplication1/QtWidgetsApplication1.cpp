@@ -6,7 +6,6 @@
 QtWidgetsApplication1::QtWidgetsApplication1(QWidget *parent)
     : QMainWindow(parent),cam()
 {
-    
     ui.setupUi(this);
     ui.comboBoxListPort->clear();
     const QList<QSerialPortInfo> &infoport = cam.GetPort();
@@ -41,6 +40,41 @@ void QtWidgetsApplication1::OnButtonBackClicked() {
     cam.sendDown();
 }
 
-void QtWidgetsApplication1::OnButtonCenterClicked() {
+void QtWidgetsApplication1::OnButtonCentrerClicked() {
     cam.sendCenter();
 }
+
+void QtWidgetsApplication1::OnButtonUpLeftClicked()
+{
+    cam.sendUpLeft();
+}
+
+void QtWidgetsApplication1::OnButtonUpRightClicked()
+{
+    cam.sendUpRight();
+}
+
+void QtWidgetsApplication1::OnButtonUpTopClicked()
+{
+    cam.sendUp();
+}
+
+void QtWidgetsApplication1::OnButtonUpBackClicked()
+{
+    cam.sendDown();
+}
+
+void QtWidgetsApplication1::OnButtonCheckupClicked()
+{
+    cam.sendLeft();
+
+    QTimer::singleShot(1500, this, [this]() {
+        cam.sendRight();
+        });
+
+    QTimer::singleShot(3000, this, [this]() {
+        cam.sendCenter();
+        });
+}
+
+
