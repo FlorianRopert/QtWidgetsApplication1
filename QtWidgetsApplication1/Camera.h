@@ -14,6 +14,8 @@ public:
     void onSendDataPort();
     void sendLeft();
     void sendRight();
+    void sendUp();
+    void sendDown();
     void sendUpLeft();
     void sendUpRight();
     void sendDownLeft();

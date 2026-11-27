@@ -47,35 +47,45 @@ void Camera::sendFrame(const QByteArray &frame)
 
 void Camera::sendLeft()
 {
-    sendFrame(QByteArray::fromHex("01 06 01 00 00 01 03 FF FC 90"));
+    sendFrame(QByteArray::fromHex("81 01 06 01 10 10 01 03 FF"));
 }
 
 void Camera::sendRight()
 {
-    sendFrame(QByteArray::fromHex("01 06 01 00 00 02 03 FF 00 00"));
+    sendFrame(QByteArray::fromHex("81 01 06 01 10 10 02 03 FF"));
+}
+
+void Camera::sendUp()
+{
+    sendFrame(QByteArray::fromHex("81 01 06 01 10 10 03 01 FF"));
+}
+
+void Camera::sendDown()
+{
+    sendFrame(QByteArray::fromHex("81 01 06 01 10 10 03 02 FF"));
 }
 
 void Camera::sendUpLeft()
 {
-    sendFrame(QByteArray::fromHex("01 06 01 00 00 01 01 FF FE D4"));
+    sendFrame(QByteArray::fromHex("81 01 06 01 10 10 01 01 FF"));
 }
 
 void Camera::sendUpRight()
 {
-    sendFrame(QByteArray::fromHex("01 06 01 00 00 02 01 FF 00 00"));
+    sendFrame(QByteArray::fromHex("81 01 06 01 10 10 02 01 FF"));
 }
 
 void Camera::sendDownLeft()
 {
-    sendFrame(QByteArray::fromHex("01 06 01 00 00 01 02 FF"));
+    sendFrame(QByteArray::fromHex("81 01 06 01 10 10 01 02 FF"));
 }
 
 void Camera::sendDownRight()
 {
-    sendFrame(QByteArray::fromHex("01 06 01 00 00 02 02 FF"));
+    sendFrame(QByteArray::fromHex("81 01 06 01 10 10 02 02 FF"));
 }
 
 void Camera::sendStop()
 {
-    sendFrame(QByteArray::fromHex("01 06 01 00 00 03 03 FF"));
+    sendFrame(QByteArray::fromHex("81 01 06 01 10 10 03 03 FF"));
 }

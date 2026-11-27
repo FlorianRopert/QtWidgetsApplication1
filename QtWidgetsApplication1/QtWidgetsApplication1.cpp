@@ -34,9 +34,9 @@ void QtWidgetsApplication1::OnButtonLeftClicked() {
 }
 
 void QtWidgetsApplication1::OnButtonTopClicked() {
-    cam.sendUpLeft();
+    cam.sendUp();
 }
 
 void QtWidgetsApplication1::OnButtonBackClicked() {
-    cam.sendDownLeft();
+    cam.sendDown();
 }
