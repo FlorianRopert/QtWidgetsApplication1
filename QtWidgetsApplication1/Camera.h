@@ -21,6 +21,7 @@ public:
     void sendDownLeft();
     void sendDownRight();
     void sendStop();
+    void sendCenter();
     const QList<QSerialPortInfo> &GetPort() const noexcept;
 private:
     void sendFrame(const QByteArray &frame);

@@ -25,5 +25,6 @@ public slots:
     void OnButtonRightClicked();
     void OnButtonTopClicked();
     void OnButtonBackClicked();
+    void OnButtonCenterClicked();
 };
 
