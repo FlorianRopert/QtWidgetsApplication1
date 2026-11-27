@@ -40,3 +40,7 @@ void QtWidgetsApplication1::OnButtonTopClicked() {
 void QtWidgetsApplication1::OnButtonBackClicked() {
     cam.sendDown();
 }
+
+void QtWidgetsApplication1::OnButtonCenterClicked() {
+    cam.sendCenter();
+}

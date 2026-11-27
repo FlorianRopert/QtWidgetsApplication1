@@ -40,7 +40,7 @@
    <widget class="QPushButton" name="pushButtonRight">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>420</x>
       <y>50</y>
       <width>80</width>
       <height>24</height>
@@ -53,8 +53,8 @@
    <widget class="QPushButton" name="pushButtonTop">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>20</y>
+      <x>320</x>
+      <y>10</y>
       <width>80</width>
       <height>24</height>
      </rect>
@@ -66,7 +66,7 @@
    <widget class="QPushButton" name="pushButtonLeft">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>220</x>
       <y>50</y>
       <width>80</width>
       <height>24</height>
@@ -79,7 +79,7 @@
    <widget class="QPushButton" name="pushButtonBack">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>320</x>
       <y>100</y>
       <width>80</width>
       <height>24</height>
@@ -87,6 +87,19 @@
     </property>
     <property name="text">
      <string>Bas</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonCentrer">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>50</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Centrer</string>
     </property>
    </widget>
   </widget>
@@ -195,6 +208,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButtonCentrer</sender>
+   <signal>pressed()</signal>
+   <receiver>QtWidgetsApplication1Class</receiver>
+   <slot>OnButtonCentrerClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>OnButtonPortClicked()</slot>
@@ -203,5 +232,6 @@
   <slot>OnButtonLeftClicked()</slot>
   <slot>OnButtonTopClicked()</slot>
   <slot>OnButtonBackClicked()</slot>
+  <slot>OnButtonCentrerClicked()</slot>
  </slots>
 </ui>
